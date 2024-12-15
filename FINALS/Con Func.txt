@@ -1,0 +1,24 @@
+def get_tax_bracket(gross_monthly_income):
+    if gross_monthly_income <= 14999:
+        return "Low Income", 0.10, 300, 150
+    elif gross_monthly_income <= 39999:
+        return "Middle Income", 0.14, 600, 300
+    elif gross_monthly_income <= 99999:
+        return "High Income", 0.18, 900, 450
+    else:
+        return "Very High Income", 0.26, 1200, 600
+
+def calculate_net_income(gross_monthly_income, tax_rate, sss_gsis_contribution, phil_health_contribution):
+    income_tax_amount = gross_monthly_income * tax_rate
+    net_monthly_income = gross_monthly_income - income_tax_amount - sss_gsis_contribution - phil_health_contribution
+    return income_tax_amount, sss_gsis_contribution, phil_health_contribution, net_monthly_income
+
+def main():
+    employee_name = input("Enter the Name of the Employee: ")
+    employee_id = input("Enter the ID Number of the Employee: ")
+    gross_monthly_income = float(input("Enter the GROSS Monthly Income of the Employee: "))
+
+    tax_bracket, tax_rate, sss_gsis_contribution, phil_health_contribution = get_tax_bracket(gross_monthly_income)
+    income_tax_amount, sss_gsis_contribution, phil_health_contribution, net_monthly_income = calculate_net_income(gross_monthly_income, tax_rate, sss_gsis_contribution, phil_health_contribution)
+
+    print("\nEmployee Information:")

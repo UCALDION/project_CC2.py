@@ -1,0 +1,23 @@
+kilogram = 255kg
+pounds = 562.179lbs
+
+mi = 62
+km = 100
+
+celius = 17 
+farenheit = 62.6 
+
+student 1 = 19
+student 2 = 20
+student 3 = 21
+student 4 = 22
+student 5 = 18
+student 6 = 19
+student 7 = 20
+student 8 = 21
+student 9 = 18
+student 10 = 19
+
+addition = student 1 student 2 + student 3 + student 4 + student 5 + student 6 + student 7 + student 8 + student 9 + student 10
+print ("sum:", addition )
+
